@@ -1,6 +1,6 @@
-<?php $this->load->view('restrita/layout/Navbar'); ?>
+<?php $this->load->view('restrita/layout/navbar'); ?>
 
-<?php $this->load->view('restrita/layout/Sidebar'); ?>
+<?php $this->load->view('restrita/layout/sidebar'); ?>
 
 
 <!-- Main Content -->
