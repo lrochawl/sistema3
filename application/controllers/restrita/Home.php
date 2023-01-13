@@ -13,6 +13,7 @@ class Home extends CI_Controller{
     public function index(){
         $this->load->view('restrita/layout/Header');
         $this->load->view('restrita/home/Index');
+        $this->load->view('restrita/layout/Settings');
         $this->load->view('restrita/layout/Footer');
     }
 }
