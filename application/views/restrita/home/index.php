@@ -1,5 +1,3 @@
-<?php $this->load->view('restrita/layout/Header'); ?>
-
 <?php $this->load->view('restrita/layout/Navbar'); ?>
 
 <?php $this->load->view('restrita/layout/Sidebar'); ?>
@@ -101,4 +99,3 @@
     </div>
 </div>
 
-<?php $this->load->view('restrita/layout/footer') ?>
