@@ -1,8 +1,8 @@
-<?php $this->load->view('layout/Header'); ?>
+<?php $this->load->view('restrita/layout/Header'); ?>
 
-<?php $this->load->view('layout/Navbar'); ?>
+<?php $this->load->view('restrita/layout/Navbar'); ?>
 
-<?php $this->load->view('layout/Sidebar'); ?>
+<?php $this->load->view('restrita/layout/Sidebar'); ?>
 
 
 <!-- Main Content -->
@@ -101,4 +101,4 @@
     </div>
 </div>
 
-<?php $this->load->view('layout/footer') ?>
+<?php $this->load->view('restrita/layout/footer') ?>
