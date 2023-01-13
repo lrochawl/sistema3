@@ -1,6 +1,6 @@
 <?php
 
-defined('BASEPATH') or exit('Ação não permitida');
+defined('BASEPATH') OR exit('Ação não permitida');
 
 class Home extends CI_Controller{
 
