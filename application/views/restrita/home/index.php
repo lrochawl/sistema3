@@ -154,7 +154,7 @@
             </div>
           </li>
           <li class="dropdown"><a href="#" data-toggle="dropdown"
-              class="nav-link dropdown-toggle nav-link-lg nav-link-user"> <img alt="image" src="public/assets/img/user.png"
+              class="nav-link dropdown-toggle nav-link-lg nav-link-user"> <img alt="image" src="<?php echo base_url('public/assets/img/user.png')?>"
                 class="user-img-radious-style"> <span class="d-sm-none d-lg-inline-block"></span></a>
             <div class="dropdown-menu dropdown-menu-right pullDown">
               <div class="dropdown-title">Hello Sarah Smith</div>
@@ -176,7 +176,7 @@
       <div class="main-sidebar sidebar-style-2">
         <aside id="sidebar-wrapper">
           <div class="sidebar-brand">
-            <a href="<?php echo base_url('index.html') ?>"> <img alt="image" src="public/assets/img/logo.png" class="header-logo" /> <span
+            <a href="<?php echo base_url('index.html') ?>"> <img alt="image" src="<?php echo base_url('public/assets/img/logo.png')?>" class="header-logo" /> <span
                 class="logo-name">Otika</span>
             </a>
           </div>
