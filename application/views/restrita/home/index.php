@@ -1,8 +1,8 @@
-<?php $this->load->view('layout/header'); ?>
+<?php $this->load->view('layout/Header'); ?>
 
-<?php $this->load->view('layout/navbar'); ?>
+<?php $this->load->view('layout/Navbar'); ?>
 
-<?php $this->load->view('layout/sidebar'); ?>
+<?php $this->load->view('layout/Sidebar'); ?>
 
 
 <!-- Main Content -->
