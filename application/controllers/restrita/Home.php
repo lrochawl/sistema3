@@ -11,6 +11,6 @@ class Home extends CI_Controller{
     }
 
     public function index(){
-        echo "pagina restrita";
+        $this->load->view('restrita/home/index');
     }
 }
