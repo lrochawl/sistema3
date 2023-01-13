@@ -492,13 +492,13 @@
     </div>
   </div>
   <!-- General JS Scripts -->
-  <script src="public/assets/js/app.min.js"></script>
+  <script src="<?php echo base_url('public/assets/js/app.min.js')?>"></script>
   <!-- JS Libraies -->
   <!-- Page Specific JS File -->
   <!-- Template JS File -->
-  <script src="public/assets/js/scripts.js"></script>
+  <script src="<?php echo base_url('public/assets/js/scripts.js')?>"></script>
   <!-- Custom JS File -->
-  <script src="public/assets/js/custom.js"></script>
+  <script src="<?php echo base_url('public/assets/js/custom.js')?>"></script>
 </body>
 
 
