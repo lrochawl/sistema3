@@ -92,7 +92,7 @@
                 <div class="mt-4 mb-4 p-3 align-center rt-sidebar-last-ele">
                     <a href="<?php echo base_url('.html') ?>" class="btn btn-icon icon-left btn-primary btn-restore-theme">
                         <i class="fas fa-undo"></i> Restore Default
-                    </a>
+                    </a> 
                 </div>
             </div>
         </div>
