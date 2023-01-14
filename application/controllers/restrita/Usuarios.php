@@ -17,6 +17,7 @@ class Usuarios extends CI_Controller {
 
         $this->load->view('restrita/layout/Header');
         $this->load->view('restrita/usuarios/Index');
+        $this->load->view('restrita/layout/Settings');
         $this->load->view('restrita/layout/Footer');
     }
 }
