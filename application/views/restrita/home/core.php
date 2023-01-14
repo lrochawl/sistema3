@@ -1,7 +1,5 @@
 <?php $this->load->view('restrita/layout/navbar'); ?>
-
 <?php $this->load->view('restrita/layout/sidebar'); ?>
-
 
 <!-- Main Content -->
 <div class="main-content">
@@ -17,7 +15,7 @@
                   <div class="card-body">
                     
 
-                  
+
                   </div>
                 </div>
               </div>
