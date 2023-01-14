@@ -75,7 +75,7 @@
                             </div>
                             <div class="card-footer">
                                 <button class="btn btn-primary">Salvar</button>
-                                <a class="btn btn-dark" href="">Voltar</a>
+                                <a class="btn btn-dark" href="<?php echo base_url('restrita/usuarios') ?>">Voltar</a>
                             </div>
                         </form>
                     </div>
