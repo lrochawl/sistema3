@@ -34,7 +34,7 @@
                           <tr>
                             <?php foreach($usuarios as $usuario):?>
                               <td> <?php echo $usuario->id; ?> </td>
-                              <td> <?php echo $usuario->frist_name.' '.$usuario->last_name; ?> </td>
+                              <td> <?php echo $usuario->first_name.' '.$usuario->last_name; ?> </td>
                               <td> <?php echo $usuario->email; ?> </td>
                               <td> <?php echo $usuario->username; ?> </td>
                               <td> <?php echo $usuario->active; ?> </td>
