@@ -37,7 +37,7 @@ class Usuarios extends CI_Controller {
 
         if(!$usuario_id){
             //Cadastrar usuário
-            $this->session->set_flashdata('erro', 'Usuário não cadastrado');
+            $this->session->set_flashdata('erro', 'Usuário não encontrado');
             redirect('restrita/usuarios');
 
         }else{

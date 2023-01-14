@@ -22,6 +22,16 @@
                         <?= $message ?>
                       </div>
                     </div>
+                    <div class="alert alert-danger alert-has-icon">
+                      <div class="alert-icon"><i class="far fa-lightbulb"></i></div>
+                      <div class="alert-body">
+                      <button class="close" data-dismiss="alert">
+                          <span>&times;</span>
+                        </button>
+                        <div class="alert-title">Danger</div>
+                        This is a danger alert.
+                      </div>
+                    </div>
                     <?php endif ?>
                     <div class="table-responsive">
                       <table class="table table-striped data-table" >
