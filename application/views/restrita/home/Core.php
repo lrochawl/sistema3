@@ -13,20 +13,19 @@
                             <h4><?php echo $titulo ?></h4>
                         </div>
                         <form name="form_core">
-                        <?php echo '<pre>'; print_r($usuarios); ?>
                             <div class="card-body">
                                 <div class="form-row">
                                     <div class="form-group col-md-4">
                                         <label for="inputEmail4">Nome</label>
-                                        <input type="text" class="form-control" name="first_name">
+                                        <input type="text" class="form-control" name="first_name" value="<?php echo (isset($usuario) ? $usuario->first_name : '') ?>">
                                     </div>
                                     <div class="form-group col-md-4">
                                         <label for="inputEmail4">Sobrenome</label>
-                                        <input type="text" class="form-control" name="last_name">
+                                        <input type="text" class="form-control" name="last_name" value="<?php echo (isset($usuario)?$usuario->last_name:'') ?>">
                                     </div>
                                     <div class="form-group col-md-4">
                                         <label for="inputEmail4">E-mail</label>
-                                        <input type="email" class="form-control" name="email">
+                                        <input type="email" class="form-control" name="email" value="<?php (isset($usuario)?$usuario->email:'') ?>">
                                     </div>
                                 </div>
                                 <div class="form-row">
