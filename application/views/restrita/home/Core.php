@@ -21,17 +21,17 @@
                                     </div>
                                     <div class="form-group col-md-4">
                                         <label for="inputEmail4">Sobrenome</label>
-                                        <input type="text" class="form-control" name="last_name" value="<?php echo (isset($usuario)?$usuario->last_name:'') ?>">
+                                        <input type="text" class="form-control" name="last_name" value="<?php echo (isset($usuario) ? $usuario->last_name : '') ?>">
                                     </div>
                                     <div class="form-group col-md-4">
                                         <label for="inputEmail4">E-mail</label>
-                                        <input type="email" class="form-control" name="email" value="<?php echo (isset($usuario)?$usuario->email:'') ?>">
+                                        <input type="email" class="form-control" name="email" value="<?php echo (isset($usuario) ? $usuario->email : '') ?>">
                                     </div>
                                 </div>
                                 <div class="form-row">
                                     <div class="form-group col-md-4">
                                         <label for="inputEmail4">Usuário</label>
-                                        <input type="text" class="form-control" name="username" value="<?php echo (isset($usuario)?$usuario->email:'')?>">
+                                        <input type="text" class="form-control" name="username" value="<?php echo (isset($usuario) ? $usuario->email : '') ?>">
                                     </div>
                                     <div class="form-group col-md-4">
                                         <label for="inputEmail4">Senha</label>
@@ -46,16 +46,14 @@
                                     <div class="form-group col-md-4">
                                         <label for="inputState">Status</label>
                                         <select id="inputState" class="form-control" name="active">
-                                            <?php if(isset($usuario)): ?>
-                                           
-                                            <option value='1' <?php echo ($usuario->active == 1) ? 'selected':'';?>>Sim</option>
-                                            <option value='0' <?php echo ($usuario->active == 0) ? 'selected':'' ;?> >Não</option>
-                                           
-                                            <?php else: ?>
 
-                                            <?php if(isset($usuario)): ?>
-                                            <option value='1' >Sim</option>
-                                            <option value='0' >Não</option>
+                                            <?php if (isset($usuario)) : ?>
+                                                <option value='1' <?php echo ($usuario->active == 1) ? 'selected' : ''; ?>>Sim</option>
+                                                <option value='0' <?php echo ($usuario->active == 0) ? 'selected' : ''; ?>>Não</option>
+
+                                            <?php else : ?>
+                                                <option value='1'>Sim</option>
+                                                <option value='0'>Não</option>
                                             <?php endif ?>
                                         </select>
                                     </div>
