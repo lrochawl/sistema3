@@ -39,7 +39,7 @@
                               <td> <?php echo ($usuario->active == 1)? '<span class="badge badge-success">Ativo</span>': '<span class="badge badge-danger">Inativo</span>'; ?> </td>
                    
                             <td>
-                            <a href="#" class="btn btn-icon btn-primary"><i class="far fa-edit"></i></a>
+                            <a href="<?php echo base_url('restrita/usuarios/'.$usuario_id) ?>" class="btn btn-icon btn-primary"><i class="far fa-edit"></i></a>
                             <a href="#" class="btn btn-icon btn-danger"><i class="fas fa-times"></i></a>
                             </td>
 

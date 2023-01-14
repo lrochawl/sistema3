@@ -32,4 +32,21 @@ class Usuarios extends CI_Controller {
         $this->load->view('restrita/layout/Settings');
         $this->load->view('restrita/layout/Footer');
     }
+
+    public function core($usuario_id = NULL){
+
+        if(!$usuario_id){
+            //Cadastrar usuário
+        
+        
+        }else{
+            if(!$this->ion_auth->user($usuario_id)->row){
+                exit('Não Existe');
+            
+            }else{
+                exit('Usuário encontrado');
+            }
+        }
+
+    }
 }
