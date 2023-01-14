@@ -37,8 +37,9 @@ class Usuarios extends CI_Controller {
 
         if(!$usuario_id){
             //Cadastrar usuário
-        
-        exit('Cadastrar usuario');
+            $this->session->set_flashdata('erro', 'Usuário não cadastrado');
+            redirect('restrita/usuarios');
+
         }else{
             if(!$usuario = $this->ion_auth->user($usuario_id)->row()){
                 exit('Não Existe');
