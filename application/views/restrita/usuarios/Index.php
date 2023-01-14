@@ -38,7 +38,10 @@
                               <td> <?php echo $usuario->username; ?> </td>
                               <td> <?php echo ($usuario->active == 1)? '<span class="badge badge-success">Ativo</span>': '<span class="badge badge-danger">Inativo</span>'; ?> </td>
                    
-                            <td><a href="#" class="btn btn-primary">Detail</a></td>
+                            <td>
+                            <a href="#" class="btn btn-icon btn-primary"><i class="far fa-edit"></i></a>
+                            <a href="#" class="btn btn-icon btn-danger"><i class="fas fa-times"></i></a>
+                            </td>
 
                             <?php endforeach ?>
                           </tr>
