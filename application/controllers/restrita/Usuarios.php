@@ -40,7 +40,7 @@ class Usuarios extends CI_Controller {
         
         
         }else{
-            if(!$this->ion_auth->user($usuario_id)->row){
+            if(!$this->ion_auth->user($usuario_id)->row()){
                 exit('Não Existe');
             
             }else{
