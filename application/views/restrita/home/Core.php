@@ -45,8 +45,15 @@
                                 </div>
                                 <div class="form-row">
                                     <div class="form-group col-md-4">
+                                        <label for="inputState">Status</label>
+                                        <select id="inputState" class="form-control" name="active">
+                                            <option selected>Sim</option>
+                                            <option>Não</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group col-md-4">
                                         <label for="inputState">Perfil de acesso</label>
-                                        <select id="inputState" class="form-control">
+                                        <select id="inputState" class="form-control" name="group">
                                             <option selected>Cliente</option>
                                             <option>Administrador</option>
                                         </select>
