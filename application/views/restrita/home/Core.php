@@ -48,8 +48,8 @@
                                         <select id="inputState" class="form-control" name="active">
                                             <?php if(isset($usuario)): ?>
                                            
-                                            <option value='1' <?php echo ($usuario->active == 1 ? 'selected':'');?>>Sim</option>
-                                            <option value='0' <?php echo ($usuario->active == 0 ? 'selected':'' );?> >Não</option>
+                                            <option value='1' <?php echo ($usuario->active == 1) ? 'selected':'';?>>Sim</option>
+                                            <option value='0' <?php echo ($usuario->active == 0) ? 'selected':'' ;?> >Não</option>
                                            
                                             <?php else: ?>
 
