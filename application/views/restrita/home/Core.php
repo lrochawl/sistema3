@@ -11,9 +11,9 @@
                     <div class="card">
                         <div class="card-header">
                             <h4><?php echo $titulo ?></h4>
-                            <?php print_r($perfil) ?>
                         </div>
                         <form name="form_core">
+                        <?php print_r($perfil) ?>
                             <div class="card-body">
                                 <div class="form-row">
                                     <div class="form-group col-md-4">
