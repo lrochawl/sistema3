@@ -1,6 +1,6 @@
 <?php $this->load->view('restrita/layout/navbar'); ?>
 <?php $this->load->view('restrita/layout/sidebar'); ?>
-<?php echo '<pre>'; print_r($usuarios); ?>
+
 <!-- Main Content -->
 <div class="main-content">
     <section class="section">
@@ -13,6 +13,7 @@
                             <h4><?php echo $titulo ?></h4>
                         </div>
                         <form name="form_core">
+                        <?php echo '<pre>'; print_r($usuarios); ?>
                             <div class="card-body">
                                 <div class="form-row">
                                     <div class="form-group col-md-4">
