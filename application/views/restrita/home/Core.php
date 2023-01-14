@@ -61,7 +61,7 @@
                                         <label >Perfil de acesso</label>
                                         <select class="form-control" name="group">
                                             <?php foreach($grupos as $grupo): ?>
-                                            <option value="<?= $grupo->id ?>" <?php ($grupo->id == $perfil->id) ? 'selected':'';?>><?= $grupo->name ?></option>
+                                            <option value="<?= $grupo->id ?>" <?php echo ($grupo->id == $perfil->id) ? 'selected':'';?>><?= $grupo->name ?></option>
                                            <?php endforeach ?>
                                         </select>
                                     </div>
@@ -70,7 +70,6 @@
                             <div class="card-footer">
                                 <button class="btn btn-primary">Submit</button>
                             </div>
-                            <?php print_r($perfil) ?>
                         </form>
                     </div>
                 </div>
