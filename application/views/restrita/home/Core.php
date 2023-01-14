@@ -11,6 +11,7 @@
                     <div class="card">
                         <div class="card-header">
                             <h4><?php echo $titulo ?></h4>
+                            <?php print_r($perfil) ?>
                         </div>
                         <form name="form_core">
                             <div class="card-body">
