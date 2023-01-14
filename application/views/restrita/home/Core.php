@@ -12,7 +12,19 @@
                         <div class="card-header">
                             <h4><?php echo $titulo ?></h4>
                         </div>
-                        <form name="form_core">
+                        <?php 
+                        if (isset($usuario)) {
+                            $usuario_id = $usuario->id;
+                        } else {
+                            $usuario_id = '';
+                        }
+                        ?>
+                        <?php $atributos = array(
+                            'name' => 'form_core'
+                        );
+                        ?>
+                        <?php echo form_open('restrita/core/'.$usuario_id, $atributos) ?>
+                    
                             <div class="card-body">
                                 <div class="form-row">
                                     <div class="form-group col-md-4">
@@ -58,26 +70,29 @@
                                         </select>
                                     </div>
                                     <div class="form-group col-md-4">
-                                        <label >Perfil de acesso</label>
+                                        <label>Perfil de acesso</label>
                                         <select class="form-control" name="group">
-                                            
-                                            <?php foreach($grupos as $grupo): ?>
-                                                <?php if(isset($usuario)):?>
-                                                    <option value="<?= $grupo->id ?>" <?php echo ($grupo->id == $perfil->id) ? 'selected':'';?>><?= $grupo->name ?></option>
-                                                <?php else: ?>
-                                                    <option value="<?= $grupo->id ?>" ><?= $grupo->name ?></option>
+
+                                            <?php foreach ($grupos as $grupo) : ?>
+                                                <?php if (isset($usuario)) : ?>
+                                                    <option value="<?= $grupo->id ?>" <?php echo ($grupo->id == $perfil->id) ? 'selected' : ''; ?>><?= $grupo->name ?></option>
+                                                <?php else : ?>
+                                                    <option value="<?= $grupo->id ?>"><?= $grupo->name ?></option>
                                                 <?php endif ?>
-                                                <?php endforeach ?>
-                                        
+                                            <?php endforeach ?>
+
                                         </select>
                                     </div>
+                                    <?php if (isset($usuario)) : ?>
+                                        <input type="hidden" name="usuario_id" value="<?php echo $usuario->id ?>">
+                                    <?php endif ?>
                                 </div>
                             </div>
                             <div class="card-footer">
                                 <button class="btn btn-primary">Salvar</button>
                                 <a class="btn btn-dark" href="<?php echo base_url('restrita/usuarios') ?>">Voltar</a>
                             </div>
-                        </form>
+                        <?php echo form_close() ?>
                     </div>
                 </div>
             </div>
