@@ -1,7 +1,7 @@
 <div class="main-sidebar sidebar-style-2">
         <aside id="sidebar-wrapper">
           <div class="sidebar-brand">
-            <a href="<?php echo base_url('index.html') ?>"> <img alt="image" src="<?php echo base_url('public/assets/img/logo.png')?>" class="header-logo" /> <span
+            <a href="<?php echo base_url('usuarios') ?>"> <img alt="image" src="<?php echo base_url('public/assets/img/logo.png')?>" class="header-logo" /> <span
                 class="logo-name">Otika</span>
             </a>
           </div>
