@@ -15,7 +15,7 @@ class Usuarios extends CI_Controller {
             'usuarios' => $this->ion_auth->users()->result()
         );
 
-        $this->load->view('restrita/layout/Header');
+        $this->load->view('restrita/layout/Header', $data);
         $this->load->view('restrita/usuarios/Index');
         $this->load->view('restrita/layout/Settings');
         $this->load->view('restrita/layout/Footer');
