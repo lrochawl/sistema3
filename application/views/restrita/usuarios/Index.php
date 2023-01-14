@@ -26,7 +26,7 @@
                             <th>E-mail</th>
                             <th>Usuário</th>
                             <th>Status</th>
-                            <th>Action</th>
+                            <th class="nosort">Ação</th>
                           </tr>
                         </thead>
                         <tbody>
