@@ -22,7 +22,6 @@
                             <th class="text-center">
                               #
                             </th>
-                            <th>#</th>
                             <th>Nome</th>
                             <th>E-mail</th>
                             <th>Usuário</th>
