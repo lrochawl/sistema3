@@ -16,7 +16,7 @@
                   </div>
                   <div class="card-body">
                     <div class="table-responsive">
-                      <table class="table table-striped" id="table-1">
+                      <table class="table table-striped data-table" >
                         <thead>
                           <tr>
                             <th class="text-center">
