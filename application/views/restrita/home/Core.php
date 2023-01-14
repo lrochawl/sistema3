@@ -29,8 +29,12 @@
                                         <input type="email" class="form-control" name="email">
                                     </div>
                                 </div>
-                                <div class="form-group">
+                                <div class="form-group col-md-6">
                                     <label for="inputPassword4">Senha</label>
+                                    <input type="password" class="form-control" name="password">
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label for="inputPassword4">Confirmar senha</label>
                                     <input type="password" class="form-control" name="password">
                                 </div>
                                 <div class="form-group">
