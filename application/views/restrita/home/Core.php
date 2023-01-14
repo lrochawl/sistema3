@@ -46,8 +46,16 @@
                                     <div class="form-group col-md-4">
                                         <label for="inputState">Status</label>
                                         <select id="inputState" class="form-control" name="active">
+                                            <?php if(isset($usuario)): ?>
+                                           
                                             <option value='1' <?php echo ($usuario->active == 1 ? 'selected':'')?>>Sim</option>
                                             <option value='0' <?php echo ($usuario->active == 0 ? 'selected':'' )?> >Não</option>
+                                            <?php else: ?>
+
+                                            <?php if(isset($usuario)): ?>
+                                            <option value='1' >Sim</option>
+                                            <option value='0' >Não</option>
+                                            <?php endif ?>
                                         </select>
                                     </div>
                                     <div class="form-group col-md-4">
