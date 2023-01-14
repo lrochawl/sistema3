@@ -13,7 +13,7 @@
                     <h4><?php echo $titulo ?></h4>
                   </div>
                   <div class="card-body">
-                  <div class="alert alert-danger alert-has-icon alert-dismissible show fade">
+                 
                     <?php if($message = $this->session->flashdata('erro')):?>
                       <div class="alert alert-danger alert-has-icon alert-dismissible show fade">
                       <div class="alert-icon"><i class="far fa-lightbulb"></i></div>
