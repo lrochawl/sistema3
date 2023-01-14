@@ -58,14 +58,8 @@
                                             <option>Administrador</option>
                                         </select>
                                     </div>
-                                    <div class="form-group col-md-4">
-                                        <label for="inputEmail4">Status</label>
-                                        <input type="text" class="form-control" name="active">
-                                    </div>
-                                    <div class="form-group col-md-4">
-                                        <label for="inputEmail4">Grupo</label>
-                                        <input type="email" class="form-control" name="email">
-                                    </div>
+                                  
+                                  
                                 </div>
 
                             </div>
