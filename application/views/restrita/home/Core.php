@@ -29,6 +29,7 @@
                                         <input type="email" class="form-control" name="email">
                                     </div>
                                 </div>
+                            <div class="form-row">
                                 <div class="form-group col-md-6">
                                     <label for="inputPassword4">Senha</label>
                                     <input type="password" class="form-control" name="password">
@@ -45,6 +46,7 @@
                                     <label for="inputAddress2">Address 2</label>
                                     <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
                                 </div>
+                            </div>
                                 <div class="form-row">
                                     <div class="form-group col-md-6">
                                         <label for="inputCity">City</label>
