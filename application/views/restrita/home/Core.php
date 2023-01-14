@@ -61,7 +61,7 @@
                                         <label >Perfil de acesso</label>
                                         <select class="form-control" name="group">
                                             <?php foreach($grupos as $grupo): ?>
-                                            <option value="<?= $grupo->id ?>" <?php ($grupo->id == $perfil->id ? 'selected':'')?>><?= $grupo->name ?></option>
+                                            <option value="<?= $grupo->id ?>" <?php ($grupo->id == $perfil->id) ? 'selected':'';?>><?= $grupo->name ?></option>
                                            <?php endforeach ?>
                                         </select>
                                     </div>
