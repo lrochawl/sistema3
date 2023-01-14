@@ -38,11 +38,11 @@
                                     <label for="inputPassword4">Confirmar senha</label>
                                     <input type="password" class="form-control" name="password">
                                 </div>
-                                <div class="form-group">
-                                    <label for="inputAddress">Address</label>
+                                <div class="form-group form-group col-md-8">
+                                    <label for="inputAddress">Rua</label>
                                     <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
                                 </div>
-                                <div class="form-group">
+                                <div class="form-group form-group col-md-4">
                                     <label for="inputAddress2">Address 2</label>
                                     <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
                                 </div>
