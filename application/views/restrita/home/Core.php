@@ -50,6 +50,7 @@
                                            
                                             <option value='1' <?php echo ($usuario->active == 1 ? 'selected':'')?>>Sim</option>
                                             <option value='0' <?php echo ($usuario->active == 0 ? 'selected':'' )?> >Não</option>
+                                           
                                             <?php else: ?>
 
                                             <?php if(isset($usuario)): ?>
