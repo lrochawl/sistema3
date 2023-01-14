@@ -6,7 +6,7 @@
 <head>
   <meta charset="UTF-8">
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no" name="viewport">
-  <title><?php echo isset($titulo) ? 'Loja Virtual '.$titulo: 'Loja Virtual - WL TOPOS' ; ?></title>
+  <title><?php echo isset($titulo) ? 'Loja Virtual |'.$titulo: 'Loja Virtual - WL TOPOS' ; ?></title>
   <!-- General CSS Files -->
   <link rel="stylesheet" href="<?php echo base_url('public/assets/css/app.min.css'); ?>">
   <!-- Template CSS -->
