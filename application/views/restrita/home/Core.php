@@ -60,14 +60,15 @@
                                     <div class="form-group col-md-4">
                                         <label >Perfil de acesso</label>
                                         <select class="form-control" name="group">
-                                            <?php if(isset($usuario)):?>
+                                            
                                             <?php foreach($grupos as $grupo): ?>
-                                            <option value="<?= $grupo->id ?>" <?php echo ($grupo->id == $perfil->id) ? 'selected':'';?>><?= $grupo->name ?></option>
-                                           <?php endforeach ?>
-                                           
-                                           <?php else: ?>
-                                            <option value="<?= $grupo->id ?>" <?php echo ($grupo->id == $perfil->id) ? 'selected':'';?>><?= $grupo->name ?></option>
-                                            <?php endif ?>
+                                                <?php if(isset($usuario)):?>
+                                                    <option value="<?= $grupo->id ?>" <?php echo ($grupo->id == $perfil->id) ? 'selected':'';?>><?= $grupo->name ?></option>
+                                                <?php else: ?>
+                                                    <option value="<?= $grupo->id ?>" ><?= $grupo->name ?></option>
+                                                <?php endif ?>
+                                                <?php endforeach ?>
+                                        
                                         </select>
                                     </div>
                                 </div>
