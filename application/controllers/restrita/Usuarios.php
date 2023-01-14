@@ -45,7 +45,7 @@ class Usuarios extends CI_Controller {
             
             }else{
                 $this->load->view('restrita/layout/Header');
-                $this->load->view('restrita/layout/NavBar');
+                $this->load->view('restrita/layout/Navbar');
                 $this->load->view('restrita/layout/Sidebar');
                 $this->load->view('restrita/home/Core');
                 $this->load->view('restrita/layout/Settings');
