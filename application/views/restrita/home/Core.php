@@ -16,14 +16,22 @@
 
                             <div class="card-body">
                                 <div class="form-row">
-                                    <div class="form-group col-md-6">
-                                        <label for="inputEmail4">Email</label>
-                                        <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
+                                    <div class="form-group col-md-4">
+                                        <label for="inputEmail4">Nome</label>
+                                        <input type="text" class="form-control" name="first_name">
                                     </div>
-                                    <div class="form-group col-md-6">
-                                        <label for="inputPassword4">Password</label>
-                                        <input type="password" class="form-control" id="inputPassword4" placeholder="Password">
+                                    <div class="form-group col-md-4">
+                                        <label for="inputEmail4">Sobrenome</label>
+                                        <input type="text" class="form-control" name="last_name">
                                     </div>
+                                    <div class="form-group col-md-4">
+                                        <label for="inputEmail4">E-mail</label>
+                                        <input type="email" class="form-control" name="email">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="inputPassword4">Senha</label>
+                                    <input type="password" class="form-control" name="password">
                                 </div>
                                 <div class="form-group">
                                     <label for="inputAddress">Address</label>
