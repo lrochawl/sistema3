@@ -44,7 +44,12 @@ class Usuarios extends CI_Controller {
                 exit('Não Existe');
             
             }else{
-                exit('Usuário encontrado');
+                $this->load->view('restrita/layout/Header');
+                $this->load->view('restrita/layout/NavBar');
+                $this->load->view('restrita/layout/Sidebar');
+                $this->load->view('restrita/home/Core');
+                $this->load->view('restrita/layout/Settings');
+                $this->load->view('restrita/layout/Footer');
             }
         }
 
