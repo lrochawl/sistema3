@@ -40,12 +40,13 @@ class Usuarios extends CI_Controller {
         
         
         }else{
-            if(!$this->ion_auth->user($usuario_id)->row()){
+            if(!$usuarios = $this->ion_auth->user($usuario_id)->row()){
                 exit('Não Existe');
             
             }else{
                 $data = array(
-                    'titulo' => 'Editar usuário'
+                    'titulo' => 'Editar usuário',
+                    'usuarios' => $usuarios
                 );
 
                 $this->load->view('restrita/layout/Header', $data);

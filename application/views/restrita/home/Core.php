@@ -1,6 +1,6 @@
 <?php $this->load->view('restrita/layout/navbar'); ?>
 <?php $this->load->view('restrita/layout/sidebar'); ?>
-
+<?php echo '<pre>'; print_r($usuarios); ?>
 <!-- Main Content -->
 <div class="main-content">
     <section class="section">
@@ -12,8 +12,7 @@
                         <div class="card-header">
                             <h4><?php echo $titulo ?></h4>
                         </div>
-                        <div class="card-body">
-
+                        <form name="form_core">
                             <div class="card-body">
                                 <div class="form-row">
                                     <div class="form-group col-md-4">
@@ -58,16 +57,12 @@
                                             <option>Administrador</option>
                                         </select>
                                     </div>
-                                  
-                                  
                                 </div>
-
                             </div>
                             <div class="card-footer">
                                 <button class="btn btn-primary">Submit</button>
                             </div>
-                        </div>
-
+                        </form>
                     </div>
                 </div>
             </div>
