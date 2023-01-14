@@ -44,7 +44,11 @@ class Usuarios extends CI_Controller {
                 exit('Não Existe');
             
             }else{
-                $this->load->view('restrita/layout/Header');
+                $data = array(
+                    'titulo' => 'Editar usuário'
+                );
+
+                $this->load->view('restrita/layout/Header', $data);
                 $this->load->view('restrita/home/Core');
                 $this->load->view('restrita/layout/Settings');
                 $this->load->view('restrita/layout/Footer');
