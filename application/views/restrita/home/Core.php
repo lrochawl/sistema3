@@ -70,6 +70,7 @@
                             <div class="card-footer">
                                 <button class="btn btn-primary">Submit</button>
                             </div>
+                            <?php print_r($perfil) ?>
                         </form>
                     </div>
                 </div>
