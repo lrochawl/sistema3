@@ -13,7 +13,6 @@
                             <h4><?php echo $titulo ?></h4>
                         </div>
                         <form name="form_core">
-                        <?php print_r($grupos) ?>
                             <div class="card-body">
                                 <div class="form-row">
                                     <div class="form-group col-md-4">
@@ -62,7 +61,7 @@
                                         <label >Perfil de acesso</label>
                                         <select class="form-control" name="group">
                                             <?php foreach($grupos as $grupo): ?>
-                                            <option value="<?= $grupo->id ?>"><?= $grupo->name ?></option>
+                                            <option value="<?= $grupo->id ?>" <?php ($grupo->id == $perfil->id ? 'selected':'')?>><?= $grupo->name ?></option>
                                            <?php endforeach ?>
                                         </select>
                                     </div>
