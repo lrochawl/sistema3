@@ -59,10 +59,11 @@
                                         </select>
                                     </div>
                                     <div class="form-group col-md-4">
-                                        <label for="inputState">Perfil de acesso</label>
-                                        <select id="inputState" class="form-control" name="group">
-                                            <option selected>Cliente</option>
-                                            <option>Administrador</option>
+                                        <label >Perfil de acesso</label>
+                                        <select class="form-control" name="group">
+                                            <?php foreach($grupos as $grupo): ?>
+                                            <option value="<?= $grupo->id ?>"><?= $grupo->name ?></option>
+                                           <?php endforeach ?>
                                         </select>
                                     </div>
                                 </div>
