@@ -48,6 +48,10 @@ class Usuarios extends CI_Controller
             } else {
                 //Usuario encontrado
                 $this->form_validation->set_rules('first_name', 'Nome', 'trim|required|min_length[4]|max_length[45]');
+                $this->form_validation->set_rules('last_name', 'Sobrenome', 'trim|required|min_length[4]|max_length[45]');
+                $this->form_validation->set_rules('email', 'email', 'trim|required|valid_email|max_length[200]');
+                $this->form_validation->set_rules('username', 'username', 'trim|required|min_length[4]|max_length[50]|alpha_dash|');
+
                 if ($this->form_validation->run()) {
                     echo '<pre>';
                     print_r($this->input->post());
