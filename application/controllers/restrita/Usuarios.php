@@ -47,6 +47,13 @@ class Usuarios extends CI_Controller
                 $this->session->set_flashdata('erro', 'Usuário não encontrado');
                 redirect('restrita/usuarios');
             } else {
+                //Usuario encontrado
+                $this->form_validation->set_rules('first_name','Nome','trim|required');
+                if($this->form_validation->run()){
+                    echo '<pre>';
+                    print_r($this->input->post());
+                }
+
                 $data = array(
                     'titulo' => 'Editar usuário',
                     'usuario' => $usuario,
