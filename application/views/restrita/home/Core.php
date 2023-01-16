@@ -52,12 +52,12 @@
                                     <div class="form-group col-md-4">
                                         <label for="inputEmail4">Senha</label>
                                         <input type="password" class="form-control" name="password" value="<?php echo (isset($usuario) ? $usuario->password : set_value('password')) ?>">
-                                        <?php form_error('password', '<div class="text-danger" >', '</div>'); ?>
+                                        <?php echo form_error('password', '<div class="text-danger" >', '</div>'); ?>
                                     </div>
                                     <div class="form-group col-md-4">
                                         <label for="inputEmail4">Confirma senha</label>
                                         <input type="password" class="form-control" name="confirma_senha" >
-                                        <?php form_error('confirma_password', '<div class="text-danger" >', '</div>'); ?>
+                                        <?php echo form_error('confirma_senha', '<div class="text-danger" >', '</div>'); ?>
                                     </div>
                                 </div>
                                 <div class="form-row">
