@@ -51,13 +51,37 @@ class Usuarios extends CI_Controller
                 $this->form_validation->set_rules('last_name', 'Sobrenome', 'trim|required|min_length[4]|max_length[45]');
                 $this->form_validation->set_rules('email', 'E-mail', 'trim|required|valid_email|callback_valida_email|min_length[4]|max_length[100]');
                 $this->form_validation->set_rules('username', 'Usuário', 'trim|required|min_length[4]|max_length[50]|alpha_dash|callback_valida_usuario');
-                $this->form_validation->set_rules('password', 'Senha', 'trim|required|min_length[4]|max_length[200]');
-                $this->form_validation->set_rules('confirma_senha', 'Confirmar Senha', 'trim|required|matches[password]');
+                $this->form_validation->set_rules('password', 'Senha', 'trim|min_length[4]|max_length[200]');
+                $this->form_validation->set_rules('confirma_senha', 'Confirmar Senha', 'trim|matches[password]');
 
                 if ($this->form_validation->run()) {
-                    echo '<pre>';
-                    print_r($this->input->post());
-                    exit();
+
+                    $data = elements(
+                        array(
+                            'first_name',
+                            'last_name',
+                            'email',
+                            'username',
+                            'password',
+                            'active'
+                        ), $this->input->post()
+                        );
+
+                        $password = $this->input->post('password');
+
+                        // Não altera a senha se a mesma não for passada
+                        if(!$password){
+                            unset($data['password']);
+
+                        }
+
+                        // Sanitizando o $data
+                        $data = html_escape($data);
+
+                        $id = $usuario_id;
+                        $this->ion_auth->update($id, $data);
+                        redirect('restrita/usuarios');
+
                 } else {
 
                     $data = array(
