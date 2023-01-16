@@ -46,7 +46,7 @@
                                 <div class="form-row">
                                     <div class="form-group col-md-4">
                                         <label for="inputEmail4">Usuário</label>
-                                        <input type="text" class="form-control" name="username" value="<?php echo (isset($usuario) ? $usuario->email : set_value('username')) ?>">
+                                        <input type="text" class="form-control" name="username" value="<?php echo (isset($usuario) ? $usuario->username : set_value('username')) ?>">
                                         <?php echo form_error('username', '<div class="text-danger">', '</div>'); ?>
                                     </div>
                                     <div class="form-group col-md-4">

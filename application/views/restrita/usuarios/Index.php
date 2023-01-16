@@ -20,7 +20,7 @@
                       <button class="close" data-dimiss="alert">
                         <span>&times;</span>
                       </button>
-                      <div class="alert-title">Sucesso</div>
+                      <div class="alert-title">Perfeito</div>
                       <?= $message; ?>
                     </div>
                   </div>
