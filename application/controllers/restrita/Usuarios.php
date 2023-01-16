@@ -41,30 +41,31 @@ class Usuarios extends CI_Controller
         if (!$usuario_id) {
             //Cadastrar usuário
             exit('Cadastrar usuario');
-
         } else {
             if (!$usuario = $this->ion_auth->user($usuario_id)->row()) {
                 $this->session->set_flashdata('erro', 'Usuário não encontrado');
                 redirect('restrita/usuarios');
             } else {
                 //Usuario encontrado
-                $this->form_validation->set_rules('first_name','Nome','trim|required');
-                if($this->form_validation->run()){
+                $this->form_validation->set_rules('first_name', 'Nome', 'trim|required');
+                if ($this->form_validation->run()) {
                     echo '<pre>';
                     print_r($this->input->post());
+                    exit();
+                } else {
+
+                    $data = array(
+                        'titulo' => 'Editar usuário',
+                        'usuario' => $usuario,
+                        'grupos' => $this->ion_auth->groups()->result(),
+                        'perfil' => $this->ion_auth->get_users_groups($usuario_id)->row(),
+                    );
+
+                    $this->load->view('restrita/layout/Header', $data);
+                    $this->load->view('restrita/home/Core');
+                    $this->load->view('restrita/layout/Settings');
+                    $this->load->view('restrita/layout/Footer');
                 }
-
-                $data = array(
-                    'titulo' => 'Editar usuário',
-                    'usuario' => $usuario,
-                    'grupos' => $this->ion_auth->groups()->result(),
-                    'perfil' => $this->ion_auth->get_users_groups($usuario_id)->row(),
-                );
-
-                $this->load->view('restrita/layout/Header', $data);
-                $this->load->view('restrita/home/Core');
-                $this->load->view('restrita/layout/Settings');
-                $this->load->view('restrita/layout/Footer');
             }
         }
     }
