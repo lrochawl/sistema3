@@ -29,30 +29,35 @@
                                 <div class="form-row">
                                     <div class="form-group col-md-4">
                                         <label for="inputEmail4">Nome</label>
-                                        <input type="text" class="form-control" name="first_name" value="<?php echo (isset($usuario) ? $usuario->first_name : '') ?>">
+                                        <input type="text" class="form-control" name="first_name" value="<?php echo (isset($usuario) ? $usuario->first_name : set_value('first_name')) ?>">
                                         <?php echo form_error("first_name", "<div class='text-danger'>", "</div>"); ?> 
                                     </div>
                                     <div class="form-group col-md-4">
                                         <label for="inputEmail4">Sobrenome</label>
-                                        <input type="text" class="form-control" name="last_name" value="<?php echo (isset($usuario) ? $usuario->last_name : '') ?>">
+                                        <input type="text" class="form-control" name="last_name" value="<?php echo (isset($usuario) ? $usuario->last_name : set_value('last_name')) ?>">
+                                        <?php echo form_error('last_name', '<div class="text-danger">', '</div>'); ?>
                                     </div>
                                     <div class="form-group col-md-4">
                                         <label for="inputEmail4">E-mail</label>
-                                        <input type="email" class="form-control" name="email" value="<?php echo (isset($usuario) ? $usuario->email : '') ?>">
+                                        <input type="email" class="form-control" name="email" value="<?php echo (isset($usuario) ? $usuario->email : set_value('email')) ?>">
+                                        <?php echo form_error('email', '<div class="text-danger">', '</div>'); ?>
                                     </div>
                                 </div>
                                 <div class="form-row">
                                     <div class="form-group col-md-4">
                                         <label for="inputEmail4">Usuário</label>
-                                        <input type="text" class="form-control" name="username" value="<?php echo (isset($usuario) ? $usuario->email : '') ?>">
+                                        <input type="text" class="form-control" name="username" value="<?php echo (isset($usuario) ? $usuario->email : set_value('username')) ?>">
+                                        <?php echo form_error('username', '<div class="text-danger">', '</div>'); ?>
                                     </div>
                                     <div class="form-group col-md-4">
                                         <label for="inputEmail4">Senha</label>
-                                        <input type="text" class="form-control" name="active">
+                                        <input type="password" class="form-control" name="password" value="<?php echo (isset($usuario) ? $usuario->password : set_value('password')) ?>">
+                                        <?php form_error('password', '<div class="text-danger" >', '</div>'); ?>
                                     </div>
                                     <div class="form-group col-md-4">
                                         <label for="inputEmail4">Confirma senha</label>
-                                        <input type="email" class="form-control" name="confirma_senha">
+                                        <input type="password" class="form-control" name="confirma_senha" >
+                                        <?php form_error('confirma_password', '<div class="text-danger" >', '</div>'); ?>
                                     </div>
                                 </div>
                                 <div class="form-row">
