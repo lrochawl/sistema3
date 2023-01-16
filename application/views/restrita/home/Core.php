@@ -30,6 +30,7 @@
                                     <div class="form-group col-md-4">
                                         <label for="inputEmail4">Nome</label>
                                         <input type="text" class="form-control" name="first_name" value="<?php echo (isset($usuario) ? $usuario->first_name : '') ?>">
+                                        <?php echo form_error("first_name", "<div class='text-danger'>", "</div>"); ?> 
                                     </div>
                                     <div class="form-group col-md-4">
                                         <label for="inputEmail4">Sobrenome</label>
