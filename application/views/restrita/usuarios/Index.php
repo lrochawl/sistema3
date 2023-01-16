@@ -15,7 +15,7 @@
                   <div class="card-body">
                  <?php if($message = $this->session->flashdata('sucesso')): ?>
                   <div class="alert alert-danger alert-has-icon alert-dismissible show fade">
-                    <div class='alert-icon'><i class="fas fa-sucess"></i></div>
+                    <div class='alert-icon'><i class="fa fa-check-circle"></i></div>
                     <div class="alert-body">
                       <button class="close" data-dimiss="alert">
                         <span>&times;</span>

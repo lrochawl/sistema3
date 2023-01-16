@@ -78,8 +78,13 @@ class Usuarios extends CI_Controller
                         // Sanitizando o $data
                         $data = html_escape($data);
 
-                        $id = $usuario_id;
-                        $this->ion_auth->update($id, $data);
+                        if($this->ion_auth->update($data)){
+                            $this->session->set_flashdata('sucesso', 'Dados atualizados com sucesso');
+                        }else{
+                            $this->session->set_flashdata('erro', $this->ion_auth->erros());
+                        }
+                        
+                        
                         redirect('restrita/usuarios');
 
                 } else {
