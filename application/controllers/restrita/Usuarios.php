@@ -47,7 +47,7 @@ class Usuarios extends CI_Controller
                 redirect('restrita/usuarios');
             } else {
                 //Usuario encontrado
-                $this->form_validation->set_rules('first_name', 'Nome', 'trim|required');
+                $this->form_validation->set_rules('first_name', 'Nome', 'trim|required|min_length[4]|max_length[45]');
                 if ($this->form_validation->run()) {
                     echo '<pre>';
                     print_r($this->input->post());
