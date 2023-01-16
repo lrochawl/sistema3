@@ -49,8 +49,8 @@ class Usuarios extends CI_Controller
                 //Usuario encontrado
                 $this->form_validation->set_rules('first_name', 'Nome', 'trim|required|min_length[4]|max_length[45]');
                 $this->form_validation->set_rules('last_name', 'Sobrenome', 'trim|required|min_length[4]|max_length[45]');
-                $this->form_validation->set_rules('email', 'email', 'trim|required|valid_email|max_length[200]');
-                $this->form_validation->set_rules('username', 'username', 'trim|required|min_length[4]|max_length[50]|alpha_dash|');
+                $this->form_validation->set_rules('email', 'email', 'trim|required|valid_email|callback_valida_email|min_length[4]|max_length[100]');
+                $this->form_validation->set_rules('username', 'username', 'trim|required|min_length[4]|max_length[50]|alpha_dash|callback_valida_usuario');
 
                 if ($this->form_validation->run()) {
                     echo '<pre>';
@@ -70,6 +70,55 @@ class Usuarios extends CI_Controller
                     $this->load->view('restrita/layout/Settings');
                     $this->load->view('restrita/layout/Footer');
                 }
+            }
+        }
+    }
+
+    public function valida_email($email){
+        $usuario_id = $this->input->post('usuario_id');
+
+        if(!$usuario_id){
+            //Cadastrando usuario
+
+            if($this->core_model->get_by_id('users', array('email' => $email))){
+                $this->form_validation->set_message('valida_email', 'Esse email já existe!');
+                return false;
+            }else{
+                return true;
+            }
+            
+        }else{
+            //Editando usuário
+            if($this->core_model->get_by_id('users', array('id !=' => $usuario_id, 'email' => $email))){
+                $this->form_validation->set_message('valida_email', 'Esse email já existe!');
+                return false;
+            }else{
+                return true;
+            }
+
+        }
+    }
+
+    public function valida_usuario($username){
+        $username_id = $this->input->post('username_id');
+
+        if(!$username_id){
+            //Cadastando usuário
+
+            if($this->core_model->get_by_id('users', array('username' => $username))){
+                $this->form_validation->set_message('valida_usuario', 'Esse usuário já existe');
+                return false;
+            }else{
+                return true;
+            }
+        }else{
+            //Editanto usuário
+
+            if($this->core_model->get_by_id('users', array('username' => $username, 'id != ' => $username_id))){
+                $this->form_validation->set_messege('valida_usuario', 'Esse username já existe!');
+                return false;
+            }else{
+                return true;
             }
         }
     }
