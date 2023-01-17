@@ -9,9 +9,8 @@
             <div class="row">
                 <div class="col-12">
                     <div class="card">
-                        <div class="card-header d-block">
+                        <div class="card-header">
                             <h4><?php echo $titulo ?></h4>
-                            <a class='btn btn-primary float-right'>Cadastrar</a>
                         </div>
                         <?php 
                         if (isset($usuario)) {
