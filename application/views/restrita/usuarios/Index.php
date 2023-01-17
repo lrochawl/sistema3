@@ -11,7 +11,7 @@
                 <div class="card">
                   <div class="card-header d-block">
                     <h4><?php echo $titulo ?></h4>
-                    <a class='btn btn-primary float-right'>Cadastrar</a>
+                    <a class='btn btn-primary float-right' href="">Cadastrar</a>
                   </div>
                   <div class="card-body">
                  <?php if($message = $this->session->flashdata('sucesso')): ?>
