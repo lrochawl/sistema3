@@ -59,7 +59,7 @@
                         <td> <?php echo $usuario->id; ?> </td>
                         <td> <?php echo $usuario->first_name . ' ' . $usuario->last_name; ?> </td>
                         <td> <?php echo $usuario->email; ?> </td>
-                        <td> <?php echo ($this->ion_auth->is_admin($usuario->id) ? 'administrador' : 'Clientes'); ?> </td>
+                        <td> <?php echo ($this->ion_auth->is_admin(10) ? 'Administrador' : 'Clientes'); ?> </td>
                         <td> <?php echo ($usuario->active == 1) ? '<span class="badge badge-success">Ativo</span>' : '<span class="badge badge-danger">Inativo</span>'; ?> </td>
 
                         <td>
