@@ -140,7 +140,7 @@ class Usuarios extends CI_Controller
     {
         $usuario_id = $this->input->post('usuario_id');
 
-        if (!$username_id) {
+        if (!$usuario_id) {
             //Cadastando usuário
 
             if ($this->core_model->get_by_id('users', array('username' => $username))) {
