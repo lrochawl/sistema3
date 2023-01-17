@@ -83,7 +83,7 @@ class Usuarios extends CI_Controller
                       
                         if ($perfil) {
                             $this->ion_auth->remove_from_group(NULL, $usuario_id);
-                            $this->ion_auth->add_group($perfil, $usuario_id);
+                            $this->ion_auth->add_to_group($perfil, $usuario_id);
                         }
                         $this->session->set_flashdata('sucesso', 'Dados atualizados com sucesso');
                     } else {
