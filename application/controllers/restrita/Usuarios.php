@@ -138,12 +138,12 @@ class Usuarios extends CI_Controller
 
     public function valida_usuario($username)
     {
-        $username_id = $this->input->post('username_id');
+        $usuario_id = $this->input->post('usuario_id');
 
         if (!$username_id) {
             //Cadastando usuário
 
-            if ($this->core_model->get_by_id('users', array('username !=' => $username))) {
+            if ($this->core_model->get_by_id('users', array('username' => $username))) {
                 $this->form_validation->set_message('valida_usuario', 'Esse usuário já existe');
                 return false;
             } else {
@@ -152,7 +152,7 @@ class Usuarios extends CI_Controller
         } else {
             //Editanto usuário
 
-            if ($this->core_model->get_by_id('users', array('username' => $username, 'id != ' => $username_id))) {
+            if ($this->core_model->get_by_id('users', array('username' => $username, 'id != ' => $usuario_id))) {
                 $this->form_validation->set_messege('valida_usuario', 'Esse username já existe!');
                 return false;
             } else {
