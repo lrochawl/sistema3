@@ -47,7 +47,7 @@
                             </th>
                             <th>Nome</th>
                             <th>E-mail</th>
-                            <th>Usuário</th>
+                            <th>Perfil de acesso</th>
                             <th>Status</th>
                             <th class="nosort">Ação</th>
                           </tr>
@@ -58,7 +58,7 @@
                               <td> <?php echo $usuario->id; ?> </td>
                               <td> <?php echo $usuario->first_name.' '.$usuario->last_name; ?> </td>
                               <td> <?php echo $usuario->email; ?> </td>
-                              <td> <?php echo $usuario->username; ?> </td>
+                              <td> <?php echo ($this->ion_auth->is_admin($usuario->id)?'Administrador':'Clientes'); ?> </td>
                               <td> <?php echo ($usuario->active == 1)? '<span class="badge badge-success">Ativo</span>': '<span class="badge badge-danger">Inativo</span>'; ?> </td>
                    
                             <td>
