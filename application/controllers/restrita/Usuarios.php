@@ -52,16 +52,16 @@ class Usuarios extends CI_Controller
                 $username = $this->input->post('username');
                 $email    = $this->input->post('email');
                 $password = $this->input->post('password');
-                $aditional_data = array(
+                $additional_data = array(
                     'first_name' => $this->input->post('first_name'),
                     'last_name'  => $this->input->post('last_name'),
                     'active'     => $this->input->post('active'),
                 );
-                $group = $this->input->post('perfil');
-                print_r($group);
-                exit();
-                if($this->ion_auth->register($username, $password, $email, $aditional_data, $group)){
-                    $this->session->set_flashdata('sucesso', 'Dados salvos com sucesso');
+                if (!$this->ion_auth->username_check($username))
+                {
+                  $group_name = 'users';
+                  $this->ion_auth->register($username, $password, $email, $additional_data, $group_name);
+                  $this->session->set_flashdata('sucesso', 'Dados salvos com sucesso');
 
                 }else{
                     $this->session->set_flashdata('erro', $this->ion_auth->erros());
