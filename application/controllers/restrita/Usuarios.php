@@ -53,6 +53,16 @@ class Usuarios extends CI_Controller
                 print_r($this->input->post());
                 echo '</pre>';
                 exit();
+            }else{
+               //Erro ao cadastrar
+               $data = array(
+                    'grupos' => $this->ion_auth->groups()->result(),
+               );
+
+               $this->load->view('layout/Header', $data);
+               $this->load->view('home/Core');
+               $this->load->view('layout/Settings');
+               $this->load->view('layout/Footer');
             }
 
         } else {
