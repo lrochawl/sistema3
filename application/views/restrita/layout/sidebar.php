@@ -18,7 +18,7 @@
                 <li><a class="nav-link" href="<?php echo base_url('widget-data.html') ?>">Data Widgets</a></li>
               </ul>
             </li>
-            <li class="dropdown">
+            <li class="dropdown <?php echo ($this->router->fetch_class() == 'usuarios' && $this->router->fetch_method() == 'index')?'active':'';?>">
               <a href="<?php echo base_url('restrita/usuarios') ?>" class="nav-link"><i data-feather="users"></i><span>Usuários</span></a>
             </li>
           </ul>
