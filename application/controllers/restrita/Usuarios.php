@@ -79,11 +79,8 @@ class Usuarios extends CI_Controller
                     $data = html_escape($data);
 
                     if ($this->ion_auth->update($usuario_id, $data)) {
-
                         $perfil = $this->input->post('perfil');
-                        print_r($perfil);
-                     //   print_r($usuario_id);
-                        exit();
+                      
                         if ($perfil_id) {
                             $this->ion_auth->remove_from_group(NULL, $usuario_id);
                             $this->ion_auth->add_group($perfil, $usuario_id);
