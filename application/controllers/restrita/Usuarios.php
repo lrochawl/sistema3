@@ -56,6 +56,7 @@ class Usuarios extends CI_Controller
             }else{
                //Erro ao cadastrar
                $data = array(
+                    'titulo' => 'Cadastrar usuário',
                     'grupos' => $this->ion_auth->groups()->result(),
                );
 
