@@ -8,7 +8,7 @@
           <ul class="sidebar-menu">
             <li class="menu-header">Menu</li>
             <li class="dropdown">
-              <a href="<?php echo base_url('index.html') ?>" class="nav-link"><i data-feather="monitor"></i><span>Inicio</span></a>
+              <a href="<?php echo base_url('index.html') ?>" class="nav-link"><i data-feather="home"></i><span>Inicio</span></a>
             </li>
             <li class="dropdown">
               <a href="#" class="menu-toggle nav-link has-dropdown"><i
@@ -19,7 +19,7 @@
               </ul>
             </li>
             <li class="dropdown">
-              <a href="<?php echo base_url('index.html') ?>" class="nav-link"><i data-feather="monitor"></i><span>Usuários</span></a>
+              <a href="<?php echo base_url('index.html') ?>" class="nav-link"><i data-feather="users"></i><span>Usuários</span></a>
             </li>
           </ul>
         </aside>
