@@ -48,7 +48,11 @@ class Usuarios extends CI_Controller
             $this->form_validation->set_rules('password', 'Senha', 'trim|required|min_length[4]|max_length[200]');
             $this->form_validation->set_rules('confirma_senha', 'Confirmar Senha', 'trim|matches[password]');
 
-    
+            if($this->form_validation->run()){
+                echo '<pre>';
+                print_r($this->input->post());
+                echo '</pre>';
+            }
 
         } else {
             if (!$usuario = $this->ion_auth->user($usuario_id)->row()) {
