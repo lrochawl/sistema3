@@ -7,7 +7,7 @@
           </div>
           <ul class="sidebar-menu">
             <li class="menu-header">Menu</li>
-            <li class="dropdown <?php echo base_url('restrita') ?>" class="nav-link <?php echo ($this->routes->fetch_class() == 'home' && $this->routes->fetch_method() == 'index')? 'active':'';?>">
+            <li class="dropdown <?php echo base_url('restrita') ?>" class="nav-link <?php echo ($this->router->fetch_class() == 'home' && $this->router->fetch_method() == 'index')? 'active':'';?>">
               <a href="" ><i data-feather="home"></i><span>Inicio</span></a>
             </li>
             <li class="dropdown">
