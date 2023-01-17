@@ -64,29 +64,34 @@ class Usuarios extends CI_Controller
                             'username',
                             'password',
                             'active'
-                        ), $this->input->post()
-                        );
+                        ),
+                        $this->input->post()
+                    );
 
-                        $password = $this->input->post('password');
+                    $password = $this->input->post('password');
 
-                        // Não altera a senha se a mesma não for passada
-                        if(!$password){
-                            unset($data['password']);
+                    // Não altera a senha se a mesma não for passada
+                    if (!$password) {
+                        unset($data['password']);
+                    }
 
+                    // Sanitizando o $data
+                    $data = html_escape($data);
+
+                    if ($this->ion_auth->update($usuario_id, $data)) {
+
+                        $perfil = $this->input->post('perfil');
+                        if ($perfil_id) {
+                            $this->ion_auth->remove_from_group(NULL, $usuario_id);
+                            $this->ion_auth->add_group($perfil, $usuario_id);
                         }
+                        $this->session->set_flashdata('sucesso', 'Dados atualizados com sucesso');
+                    } else {
+                        $this->session->set_flashdata('erro', $this->ion_auth->erros());
+                    }
 
-                        // Sanitizando o $data
-                        $data = html_escape($data);
 
-                        if($this->ion_auth->update($usuario_id, $data)){
-                            $this->session->set_flashdata('sucesso', 'Dados atualizados com sucesso');
-                        }else{
-                            $this->session->set_flashdata('erro', $this->ion_auth->erros());
-                        }
-                        
-                        
-                        redirect('restrita/usuarios');
-
+                    redirect('restrita/usuarios');
                 } else {
 
                     $data = array(
@@ -105,50 +110,50 @@ class Usuarios extends CI_Controller
         }
     }
 
-    public function valida_email($email){
+    public function valida_email($email)
+    {
         $usuario_id = $this->input->post('usuario_id');
 
-        if(!$usuario_id){
+        if (!$usuario_id) {
             //Cadastrando usuario
 
-            if($this->core_model->get_by_id('users', array('email' => $email))){
+            if ($this->core_model->get_by_id('users', array('email' => $email))) {
                 $this->form_validation->set_message('valida_email', 'Esse email já existe!');
                 return false;
-            }else{
+            } else {
                 return true;
             }
-            
-        }else{
+        } else {
             //Editando usuário
-            if($this->core_model->get_by_id('users', array('id !=' => $usuario_id, 'email' => $email))){
+            if ($this->core_model->get_by_id('users', array('id !=' => $usuario_id, 'email' => $email))) {
                 $this->form_validation->set_message('valida_email', 'Esse email já existe!');
                 return false;
-            }else{
+            } else {
                 return true;
             }
-
         }
     }
 
-    public function valida_usuario($username){
+    public function valida_usuario($username)
+    {
         $username_id = $this->input->post('username_id');
 
-        if(!$username_id){
+        if (!$username_id) {
             //Cadastando usuário
 
-            if($this->core_model->get_by_id('users', array('username' => $username))){
+            if ($this->core_model->get_by_id('users', array('username' => $username))) {
                 $this->form_validation->set_message('valida_usuario', 'Esse usuário já existe');
                 return false;
-            }else{
+            } else {
                 return true;
             }
-        }else{
+        } else {
             //Editanto usuário
 
-            if($this->core_model->get_by_id('users', array('username' => $username, 'id != ' => $username_id))){
+            if ($this->core_model->get_by_id('users', array('username' => $username, 'id != ' => $username_id))) {
                 $this->form_validation->set_messege('valida_usuario', 'Esse username já existe!');
                 return false;
-            }else{
+            } else {
                 return true;
             }
         }
