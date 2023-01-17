@@ -55,11 +55,11 @@ class Usuarios extends CI_Controller
                 $aditional_data = array(
                     'first_name' => $this->input->post('first_name'),
                     'last_name'  => $this->input->post('last_name'),
-                    'active'     => $this->input->post('active'),
+                    'group'     => $this->input->post('perfil'),
                 );
-                $group = $this->input->post('perfil');
+                $active = $this->input->post('active');
 
-                if($this->ion_auth->register($username, $password, $email, $aditional_data, $group)){
+                if($this->ion_auth->register($username, $password, $email, $aditional_data, $active)){
                     $this->session->set_flashdata('sucesso', 'Dados salvos com sucesso');
 
                 }else{
