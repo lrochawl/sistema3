@@ -19,7 +19,7 @@
               </ul>
             </li>
             <li class="dropdown">
-              <a href="<?php echo base_url('index.html') ?>" class="nav-link"><i data-feather="users"></i><span>Usuários</span></a>
+              <a href="<?php echo base_url('restrita/usuarios') ?>" class="nav-link"><i data-feather="users"></i><span>Usuários</span></a>
             </li>
           </ul>
         </aside>
