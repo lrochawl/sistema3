@@ -59,10 +59,10 @@ class Usuarios extends CI_Controller
                     'grupos' => $this->ion_auth->groups()->result(),
                );
 
-               $this->load->view('restrita/layout/header', $data);
-               $this->load->view('restrita/home/core');
-               $this->load->view('restrita/layout/settings');
-               $this->load->view('restrita/layout/footer');
+               $this->load->view('restrita/layout/Header', $data);
+               $this->load->view('restrita/home/Core');
+               $this->load->view('restrita/layout/Settings');
+               $this->load->view('restrita/layout/Footer');
             }
 
         } else {
