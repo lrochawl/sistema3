@@ -42,7 +42,7 @@ class Usuarios extends CI_Controller
         if (!$usuario_id) {
             //Cadastrar usuário
             $this->form_validation->set_rules('first_name', 'Nome', 'trim|required|min_length[4]|max_length[45]');
-            $this->foem_validation->set_rules('last_name', 'Sobrenome', 'trim|required|min_length[4]|max_length[45]');
+            $this->form_validation->set_rules('last_name', 'Sobrenome', 'trim|required|min_length[4]|max_length[45]');
             $this->form_validation->set_rules('username', 'Usuário', 'trim|required|min_length[4]|max_length[50]|alpha_dash|callback_valida_usuario');
             $this->form_validation->set_rules('email', 'E-mail', 'trim|required|min_length[4]|max_length[100]|callback_valida_email|valid_email');
             $this->form_validation->set_rules('password', 'Senha', 'trim|required|min_length[4]|max_length[200]');
