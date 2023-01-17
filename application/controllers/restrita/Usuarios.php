@@ -141,7 +141,7 @@ class Usuarios extends CI_Controller
         if (!$username_id) {
             //Cadastando usuário
 
-            if ($this->core_model->get_by_id('users', array('username' => $username))) {
+            if ($this->core_model->get_by_id('users', array('username !=' => $username))) {
                 $this->form_validation->set_message('valida_usuario', 'Esse usuário já existe');
                 return false;
             } else {

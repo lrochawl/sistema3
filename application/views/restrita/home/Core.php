@@ -51,7 +51,7 @@
                                     </div>
                                     <div class="form-group col-md-4">
                                         <label for="inputEmail4">Senha</label>
-                                        <input type="password" class="form-control" name="password" value="<?php echo (isset($usuario) ? $usuario->password : set_value('password')) ?>">
+                                        <input type="password" class="form-control" name="password" value="">
                                         <?php echo form_error('password', '<div class="text-danger" >', '</div>'); ?>
                                     </div>
                                     <div class="form-group col-md-4">
