@@ -77,7 +77,7 @@
                                     </div>
                                     <div class="form-group col-md-4">
                                         <label>Perfil de acesso</label>
-                                        <select class="form-control" name="group">
+                                        <select class="form-control" name="perfil">
 
                                             <?php foreach ($grupos as $grupo) : ?>
                                                 <?php if (isset($usuario)) : ?>
