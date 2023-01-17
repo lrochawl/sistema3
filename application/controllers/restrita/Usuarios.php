@@ -55,7 +55,7 @@ class Usuarios extends CI_Controller
                 $aditional_data = array(
                     'first_name' => $this->input->post('first_name'),
                     'last_name'  => $this->input->post('last_name'),
-                    'active'     => $this->input->post('perfil'),
+                    'active'     => $this->input->post('active'),
                 );
                 $group = $this->input->post('perfil');
 
