@@ -49,11 +49,11 @@ class Usuarios extends CI_Controller
             $this->form_validation->set_rules('confirma_senha', 'Confirmar Senha', 'trim|matches[password]');
 
             if ($this->form_validation->run()) {
-                $username = $this->input->post('usuario');
+                $username = $this->input->post('username');
                 $email    = $this->input->post('email');
                 $password = $this->input->post('password');
                 $aditional_data = array(
-                    'first_name' => $this->input->post('fist_name'),
+                    'first_name' => $this->input->post('first_name'),
                     'last_name'  => $this->input->post('last_name'),
                     'active'     => $this->input->post('active'),
                 );
