@@ -51,7 +51,7 @@ class Usuarios extends CI_Controller
             if($this->form_validation->run()){
                 echo '<pre>';
                 print_r($this->input->post());
-                echo '</pre>'
+                echo '</pre>';
             }
 
         } else {
