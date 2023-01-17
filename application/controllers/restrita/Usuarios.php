@@ -48,24 +48,36 @@ class Usuarios extends CI_Controller
             $this->form_validation->set_rules('password', 'Senha', 'trim|required|min_length[4]|max_length[200]');
             $this->form_validation->set_rules('confirma_senha', 'Confirmar Senha', 'trim|matches[password]');
 
-            if($this->form_validation->run()){
-                echo '<pre>';
-                print_r($this->input->post());
-                echo '</pre>';
-                exit();
-            }else{
-               //Erro ao cadastrar
-               $data = array(
+            if ($this->form_validation->run()) {
+                $username = $this->input->post('usuario');
+                $email    = $this->input->post('email');
+                $password = $this->input->post('password');
+                $aditional_data = array(
+                    'first_name' => $this->input->post('fist_name'),
+                    'last_name'  => $this->input->post('last_name'),
+                    'active'     => $this->input->post('active'),
+                );
+                $group = $this->input->post('perfil');
+
+                if($this->ion_auth->register($username, $password, $email, $aditional_data, $group)){
+                    $this->session->set_flashdata('sucesso', 'Dados salvos com sucesso');
+
+                }else{
+                    $this->session->set_flashdata('erro', $this->ion_auth->erros());
+                }
+                redirect('restrita/usuarios');
+            } else {
+                //Erro ao cadastrar
+                $data = array(
                     'titulo' => 'Cadastrar usuário',
                     'grupos' => $this->ion_auth->groups()->result(),
-               );
+                );
 
-               $this->load->view('restrita/layout/Header', $data);
-               $this->load->view('restrita/home/Core');
-               $this->load->view('restrita/layout/Settings');
-               $this->load->view('restrita/layout/Footer');
+                $this->load->view('restrita/layout/Header', $data);
+                $this->load->view('restrita/home/Core');
+                $this->load->view('restrita/layout/Settings');
+                $this->load->view('restrita/layout/Footer');
             }
-
         } else {
             if (!$usuario = $this->ion_auth->user($usuario_id)->row()) {
                 $this->session->set_flashdata('erro', 'Usuário não encontrado');
@@ -105,7 +117,7 @@ class Usuarios extends CI_Controller
 
                     if ($this->ion_auth->update($usuario_id, $data)) {
                         $perfil = (int) $this->input->post('perfil');
-                      
+
                         if ($perfil) {
                             $this->ion_auth->remove_from_group(NULL, $usuario_id);
                             $this->ion_auth->add_to_group($perfil, $usuario_id);
@@ -137,7 +149,7 @@ class Usuarios extends CI_Controller
 
     public function valida_email($email)
     {
-        $usuario_id = $this->input->post('usuario_id');
+        $usuario_id = (int) $this->input->post('usuario_id');
 
         if (!$usuario_id) {
             //Cadastrando usuario
@@ -161,7 +173,7 @@ class Usuarios extends CI_Controller
 
     public function valida_usuario($username)
     {
-        $usuario_id = $this->input->post('usuario_id');
+        $usuario_id = (int) $this->input->post('usuario_id');
 
         if (!$usuario_id) {
             //Cadastando usuário
