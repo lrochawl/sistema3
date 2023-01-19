@@ -12,7 +12,7 @@
                     'class' => 'needs-validation'
                 );
                 ?>
-                <?php echo form_open('restrita/login') ?>
+                <?php echo form_open('restrita/login/auth') ?>
                   <div class="form-group">
                     <label for="email">Seu E-mail</label>
                     <input type="email" class="form-control" name="email" tabindex="1" autofocus>

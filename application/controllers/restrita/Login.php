@@ -17,4 +17,11 @@ class Login extends CI_Controller{
         $this->load->view('restrita/layout/Footer');
     }
 
+    public function auth(){
+       
+        echo '<pre>';
+        print_r($this->input->post());
+        exit();
+    }
+
 }
