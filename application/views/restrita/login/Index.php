@@ -8,6 +8,19 @@
                 <h4><?php echo $titulo; ?></h4>
               </div>
               <div class="card-body">
+              
+              <?php if ($message = $this->session->flashdata('erro')) : ?>
+                <div class="alert alert-danger alert-has-icon alert-dismissible show fade">
+                  <div class="alert-icon"><i class="fas fa-exclamation-circle"></i></div>
+                  <div class="alert-body">
+                    <button class="close" data-dismiss="alert">
+                      <span>&times;</span>
+                    </button>
+                    <div class="alert-title">Atenção</div>
+                    <?= $message ?>
+                  </div>
+                </div>
+              <?php endif ?>
                 <?php $data = array(
                     'class' => 'needs-validation'
                 );

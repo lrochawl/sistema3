@@ -1,12 +1,15 @@
-<?php 
-defined('BASEPATH') OR exit('Ação não permitida');
+<?php
+defined('BASEPATH') or exit('Ação não permitida');
 
-class Login extends CI_Controller{
-    public function __construct(){
+class Login extends CI_Controller
+{
+    public function __construct()
+    {
         parent::__construct();
     }
 
-    public function index(){
+    public function index()
+    {
         $data = array(
             'titulo' => 'Login area restrita',
         );
@@ -17,11 +20,19 @@ class Login extends CI_Controller{
         $this->load->view('restrita/layout/Footer');
     }
 
-    public function auth(){
-       
-        echo '<pre>';
-        print_r($this->input->post());
-        exit();
-    }
+    public function auth()
+    {
 
+        $identity = $this->input->post('email');
+        $password = $this->input->post('password');
+        $remenber = ($this->input->post('remenber' ? TRUE : FALSE));
+
+        if ($this->ion_auth->login($identity, $password, $remenbe)) {
+            $this->session->set_flashdata('sucesso', 'Seja bem-vindo(a)');
+            redirect('restrita');
+        } else {
+            $this->session->set_flashdata('erro', 'Por favor verifique suas credencias de acesso');
+            redirect('restrita/login');
+        }
+    }
 }
