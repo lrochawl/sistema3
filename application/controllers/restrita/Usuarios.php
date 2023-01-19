@@ -206,7 +206,7 @@ class Usuarios extends CI_Controller
         } else {
             if ($this->ion_auth->is_admin($usuario_id)) {
                 $this->session->set_flashdata('erro', 'Não é permitido excluir um usuário com perfil de administrador');
-                redirect('redirect/usuarios');
+                redirect('restrita/usuarios');
             }
 
             if ($this->ion_auth->delete_user($usuario_id)) {
