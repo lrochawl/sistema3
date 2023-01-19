@@ -58,11 +58,10 @@ class Usuarios extends CI_Controller
                     'active'     => $this->input->post('active'),
                 );
                 $group = array($this->input->post('perfil'));
-               
-                if($this->ion_auth->register($username, $password, $email, $additional_data, $group)){
-                    $this->session->set_flashdata('sucesso', 'Dados salvos com sucesso');
 
-                }else{
+                if ($this->ion_auth->register($username, $password, $email, $additional_data, $group)) {
+                    $this->session->set_flashdata('sucesso', 'Dados salvos com sucesso');
+                } else {
                     $this->session->set_flashdata('erro', $this->ion_auth->erros());
                 }
                 redirect('restrita/usuarios');
@@ -193,6 +192,30 @@ class Usuarios extends CI_Controller
             } else {
                 return true;
             }
+        }
+    }
+
+    public function delete($usuario_id = NULL)
+    {
+
+        $usuario_id = (int) $usuario_id;
+
+        if (!$usuario_id || !$this->ion_auth->user($usuarios_id)->row()) {
+            $this->session->set_flashdata('erro', 'O usuário não foi encontrado');
+            redirect('restrita/usuarios');
+        } else {
+            if ($this->ion_auth->is_admin($usuario_id)) {
+                $this->session->set_flashdata('erro', 'Não é permitido excluir um usuário com perfil de administrador');
+                redirect('redirect/usuario');
+            }
+
+            if ($this->ion_auth->delete_user($usuario_id)) {
+                $this->session->set_flashdata('sucesso', 'Usuário foi excluido com sucesso');
+            } else {
+                $this->session->set_flashdata('erro', $this->ion_auth->errors());
+            }
+
+            redirect('restrita/usuarios');
         }
     }
 }
