@@ -11,7 +11,7 @@ class Login extends CI_Controller{
             'titulo' => 'Login area restrita',
         );
 
-        $this->load->view('retrita/layout/Header');
+        $this->load->view('restrita/layout/Header');
         $this->load->view('restrita/login/Index');
         $this->load->view('restrita/layout/Settings');
         $this->load->view('restrita/layout/Footer');
