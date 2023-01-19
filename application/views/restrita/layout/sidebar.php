@@ -2,7 +2,7 @@
         <aside id="sidebar-wrapper">
           <div class="sidebar-brand">
             <a href="<?php echo base_url('restrita/usuarios') ?>"> <img alt="image" src="<?php echo base_url('public/assets/img/logo.png')?>" class="header-logo" /> <span
-                class="logo-name">Otika</span>
+                class="logo-name">WL TOPOS</span>
             </a>
           </div>
           <ul class="sidebar-menu">
