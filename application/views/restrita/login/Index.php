@@ -12,9 +12,6 @@
                   <div class="form-group">
                     <label for="email">Seu E-mail</label>
                     <input type="email" class="form-control" name="email" tabindex="1" autofocus>
-                    <div class="invalid-feedback">
-                      Please fill in your email
-                    </div>
                   </div>
                   <div class="form-group">
                     <div class="d-block">
@@ -25,10 +22,7 @@
                         </a>
                       </div>
                     </div>
-                    <input id="password" type="password" class="form-control" name="password" tabindex="2" required>
-                    <div class="invalid-feedback">
-                      please fill in your password
-                    </div>
+                    <input id="password" type="password" class="form-control" name="password" tabindex="2" >
                   </div>
                   <div class="form-group">
                     <div class="custom-control custom-checkbox">
