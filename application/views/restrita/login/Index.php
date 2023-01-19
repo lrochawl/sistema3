@@ -8,7 +8,11 @@
                 <h4><?php echo $titulo; ?></h4>
               </div>
               <div class="card-body">
-                <form method="POST" action="#" class="needs-validation" novalidate="">
+                <?php $data = array(
+                    'class' => 'needs-validation'
+                );
+                ?>
+                <?php echo form_open('restrita/login') ?>
                   <div class="form-group">
                     <label for="email">Seu E-mail</label>
                     <input type="email" class="form-control" name="email" tabindex="1" autofocus>
@@ -35,7 +39,7 @@
                       Login
                     </button>
                   </div>
-                </form>              
+                <?php echo form_close(); ?>            
               </div>
             </div>
           </div>
