@@ -49,6 +49,29 @@
                                     </div>
                                     
                                 </div>
+                                <div class="form-row">
+                                    <div class="form-group col-md-3">
+                                        <label for="inputEmail4">Telefone fixo</label>
+                                        <input type="text" class="form-control phone_with_ddd" name="sistema_telefone_fixo" value="<?php echo (isset($sistema) ? $sistema->sistema_telefone_fixo : set_value('sistema_telefone_fixo')) ?>">
+                                        <?php echo form_error("sistema_telefone_fixo", "<div class='text-danger'>", "</div>"); ?> 
+                                    </div>
+                                    <div class="form-group col-md-3">
+                                        <label for="inputEmail4">Telefone móvel</label>
+                                        <input type="text" class="form-control sp_celphones" name="sistema_telefone_movel" value="<?php echo (isset($sistema) ? $sistema->sistema_telefone_movel : set_value('sistema_telefone_movel')) ?>">
+                                        <?php echo form_error("sistema_telefone_movel", "<div class='text-danger'>", "</div>"); ?> 
+                                    </div>
+                                    <div class="form-group col-md-3">
+                                        <label for="inputEmail4">E-mail de contato</label>
+                                        <input type="email" class="form-control cnpj" name="sistema_email" value="<?php echo (isset($sistema) ? $sistema->sistema_email : set_value('sistema_email')) ?>">
+                                        <?php echo form_error("sistema_email", "<div class='text-danger'>", "</div>"); ?> 
+                                    </div>
+                                    <div class="form-group col-md-3">
+                                        <label for="inputEmail4">URL do site</label>
+                                        <input type="url" class="form-control" name="sistema_site_url" value="<?php echo (isset($sistema) ? $sistema->sistema_site_url : set_value('sistema_site_url')) ?>">
+                                        <?php echo form_error("sistema_site_url", "<div class='text-danger'>", "</div>"); ?> 
+                                    </div>
+                                    
+                                </div>
                                
                             </div>
                             <div class="card-footer">
