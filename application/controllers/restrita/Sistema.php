@@ -22,7 +22,7 @@ class Sistema extends CI_Controller{
         );
 
         $this->load->view('restrita/layout/header', $data);
-        $this->load->view('restrita/layout/sistema');
+        $this->load->view('restrita/sistema/index');
         $this->load->view('restrita/layout/settings');
         $this->load->view('restrita/layout/footer');
     }
