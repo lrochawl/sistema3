@@ -40,9 +40,9 @@ class Login extends CI_Controller
     {
         if ($this->ion_auth->logged_in()) {
             $this->ion_auth->logout();
-            $this->session->set_flashdata('erro', 'Sessão encerrada');
+            
         }
-
+        $this->session->set_flashdata('erro', 'Sessão encerrada');
         redirect('restrita/login');
     }
 }
