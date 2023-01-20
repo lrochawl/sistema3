@@ -22,6 +22,10 @@
             <?php endif ?>
             <!-- add content here -->
 
-            
+            <?php echo '<pre>' ?>
+            <?php print_r($this->session->userdata());
+            exit();
+            ?>
+
         </div>
     </section>
