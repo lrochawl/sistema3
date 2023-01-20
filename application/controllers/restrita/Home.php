@@ -8,7 +8,7 @@ class Home extends CI_Controller{
         parent::__construct();
 
         //Existe uma sessão?
-        if(!$this->ion_auth->loged_in()){
+        if(!$this->ion_auth->logged_in()){
             $this->session->set_flashdata('erro', 'Sua sessão expirou');
             redirect('restrita/login');
         }

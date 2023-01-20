@@ -37,7 +37,7 @@ class Login extends CI_Controller
     }
 
     public function logout(){
-        if($this->ion_auth->loged_in()){
+        if($this->ion_auth->logged_in()){
             $this->session->set_flashdata('erro', 'Sessão encerrada');
             $this->ion_auth->logout();
         }
