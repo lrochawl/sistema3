@@ -17,7 +17,7 @@ class Sistema extends CI_Controller{
        
 
         $data = array(
-            'titulo'  => 'Sistema',
+            'titulo'  => 'Informações da loja',
             'sistema' => $this->core_model->get_by_id('sistema', array('sistema_id' => 1)),
         );
 

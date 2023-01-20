@@ -73,7 +73,7 @@ class Usuarios extends CI_Controller
                 );
 
                 $this->load->view('restrita/layout/header', $data);
-                $this->load->view('restrita/home/core');
+                $this->load->view('restrita/usuarios/core');
                 $this->load->view('restrita/layout/settings');
                 $this->load->view('restrita/layout/footer');
             }
@@ -138,7 +138,7 @@ class Usuarios extends CI_Controller
                     );
 
                     $this->load->view('restrita/layout/header', $data);
-                    $this->load->view('restrita/home/core');
+                    $this->load->view('restrita/usuarios/core');
                     $this->load->view('restrita/layout/settings');
                     $this->load->view('restrita/layout/footer');
                 }
