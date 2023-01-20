@@ -14,19 +14,16 @@ class Sistema extends CI_Controller{
 
     public function index(){
 
-       $sistema = $this->core_model->get_by_id('sistema', array('sistema_id' => 1));
-
-       echo '<pre>';
-       print_r($sistema);
-       exit();
+       
 
         $data = array(
-            'titulo' => 'Sistema',
+            'titulo'  => 'Sistema',
+            'sistema' => $this->core_model->get_by_id('sistema', array('sistema_id' => 1)),
         );
 
-        $this->load->view('restrita/layout/Header', $data);
-        $this->load->view('restrita/layout/Sistema');
-        $this->load->view('restrita/layout/Settings');
-        $this->load->view('restrita/layout/Footer');
+        $this->load->view('restrita/layout/header', $data);
+        $this->load->view('restrita/layout/sistema');
+        $this->load->view('restrita/layout/settings');
+        $this->load->view('restrita/layout/footer');
     }
 }

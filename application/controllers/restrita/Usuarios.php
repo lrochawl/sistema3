@@ -29,10 +29,10 @@ class Usuarios extends CI_Controller
             ),
         );
 
-        $this->load->view('restrita/layout/Header', $data);
-        $this->load->view('restrita/usuarios/Index');
-        $this->load->view('restrita/layout/Settings');
-        $this->load->view('restrita/layout/Footer');
+        $this->load->view('restrita/layout/header', $data);
+        $this->load->view('restrita/usuarios/index');
+        $this->load->view('restrita/layout/settings');
+        $this->load->view('restrita/layout/footer');
     }
 
     public function core($usuario_id = NULL)
@@ -72,10 +72,10 @@ class Usuarios extends CI_Controller
                     'grupos' => $this->ion_auth->groups()->result(),
                 );
 
-                $this->load->view('restrita/layout/Header', $data);
-                $this->load->view('restrita/home/Core');
-                $this->load->view('restrita/layout/Settings');
-                $this->load->view('restrita/layout/Footer');
+                $this->load->view('restrita/layout/header', $data);
+                $this->load->view('restrita/home/core');
+                $this->load->view('restrita/layout/settings');
+                $this->load->view('restrita/layout/footer');
             }
         } else {
             if (!$usuario = $this->ion_auth->user($usuario_id)->row()) {
@@ -137,10 +137,10 @@ class Usuarios extends CI_Controller
                         'perfil' => $this->ion_auth->get_users_groups($usuario_id)->row(),
                     );
 
-                    $this->load->view('restrita/layout/Header', $data);
-                    $this->load->view('restrita/home/Core');
-                    $this->load->view('restrita/layout/Settings');
-                    $this->load->view('restrita/layout/Footer');
+                    $this->load->view('restrita/layout/header', $data);
+                    $this->load->view('restrita/home/core');
+                    $this->load->view('restrita/layout/settings');
+                    $this->load->view('restrita/layout/footer');
                 }
             }
         }

@@ -20,9 +20,9 @@ class Home extends CI_Controller{
             'titulo' => 'Inicio'
         );
 
-        $this->load->view('restrita/layout/Header', $data);
-        $this->load->view('restrita/home/Index');
-        $this->load->view('restrita/layout/Settings');
-        $this->load->view('restrita/layout/Footer');
+        $this->load->view('restrita/layout/header', $data);
+        $this->load->view('restrita/home/index');
+        $this->load->view('restrita/layout/settings');
+        $this->load->view('restrita/layout/footer');
     }
 }
