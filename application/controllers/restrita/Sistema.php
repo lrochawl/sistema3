@@ -19,6 +19,10 @@ class Sistema extends CI_Controller{
         $data = array(
             'titulo'  => 'Informações da loja',
             'sistema' => $this->core_model->get_by_id('sistema', array('sistema_id' => 1)),
+            'scripts' => array(
+                'js/mask/jquery.mask.min.js',
+                'custom.js'
+            ),
         );
 
         $this->load->view('restrita/layout/header', $data);
