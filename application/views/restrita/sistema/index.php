@@ -80,7 +80,7 @@
                                     </div>
                                     <div class="form-group col-md-3">
                                         <label for="inputEmail4">Endereço</label>
-                                        <input type="text" class="form-control sp_celphones" name="sistema_endereco" value="<?php echo (isset($sistema) ? $sistema->sistema_endereco : set_value('sistema_endereco')) ?>">
+                                        <input type="text" class="form-control" name="sistema_endereco" value="<?php echo (isset($sistema) ? $sistema->sistema_endereco : set_value('sistema_endereco')) ?>">
                                         <?php echo form_error("sistema_endereco", "<div class='text-danger'>", "</div>"); ?> 
                                     </div>
                                     <div class="form-group col-md-3">
@@ -98,7 +98,7 @@
                                 <div class="form-row">
                                     <div class="form-group col-md-3">
                                         <label for="inputEmail4">UF</label>
-                                        <input type="text" class="form-control phone_with_ddd" name="sistema_estado" value="<?php echo (isset($sistema) ? $sistema->sistema_estado : set_value('sistema_estado')) ?>">
+                                        <input type="text" class="form-control" name="sistema_estado" value="<?php echo (isset($sistema) ? $sistema->sistema_estado : set_value('sistema_estado')) ?>">
                                         <?php echo form_error("sistema_estado", "<div class='text-danger'>", "</div>"); ?> 
                                     </div>
                                  
