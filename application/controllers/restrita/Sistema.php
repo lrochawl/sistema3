@@ -21,7 +21,7 @@ class Sistema extends CI_Controller{
             'sistema' => $this->core_model->get_by_id('sistema', array('sistema_id' => 1)),
             'scripts' => array(
                 'js/mask/jquery.mask.min.js',
-                'custom.js'
+                'js/mask/custom.js'
             ),
         );
 
