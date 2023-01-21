@@ -102,7 +102,7 @@
                                  
                                 </div>
                                <div class="form-row">
-                               <div class="form-group col-md-2">
+                               <div class="form-group col-md-4">
                                         <label for="inputEmail4">Quntidade de produtos em destaque</label>
                                         <input type="number" class="form-control" name="sistema_produtos_destaques" value="<?php echo (isset($sistema) ? $sistema->sistema_produtos_destaques : set_value('sistema_produtos_destaques')) ?>">
                                         <?php echo form_error("sistema_produtos_destaques", "<div class='text-danger'>", "</div>"); ?> 
