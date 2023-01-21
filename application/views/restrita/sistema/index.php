@@ -78,7 +78,7 @@
                                         <input type="text" class="form-control phone_with_ddd" name="sistema_cep" value="<?php echo (isset($sistema) ? $sistema->sistema_cep : set_value('sistema_cep')) ?>">
                                         <?php echo form_error("sistema_cep", "<div class='text-danger'>", "</div>"); ?> 
                                     </div>
-                                    <div class="form-group col-md-2">
+                                    <div class="form-group col-md-3">
                                         <label for="inputEmail4">Endereço</label>
                                         <input type="text" class="form-control" name="sistema_endereco" value="<?php echo (isset($sistema) ? $sistema->sistema_endereco : set_value('sistema_endereco')) ?>">
                                         <?php echo form_error("sistema_endereco", "<div class='text-danger'>", "</div>"); ?> 
