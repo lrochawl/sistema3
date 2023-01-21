@@ -71,6 +71,8 @@
                                         <?php echo form_error("sistema_site_url", "<div class='text-danger'>", "</div>"); ?> 
                                     </div>
                                     
+                                </div>
+                                <div class="form-row">
                                     <div class="form-group col-md-2">
                                         <label for="inputEmail4">CEP</label>
                                         <input type="text" class="form-control phone_with_ddd" name="sistema_cep" value="<?php echo (isset($sistema) ? $sistema->sistema_cep : set_value('sistema_cep')) ?>">
@@ -92,8 +94,6 @@
                                         <?php echo form_error("sistema_cidade", "<div class='text-danger'>", "</div>"); ?> 
                                     </div>
                                     
-                                </div>
-                                <div class="form-row">
                                     <div class="form-group col-md-2">
                                         <label for="inputEmail4">UF</label>
                                         <input type="text" class="form-control" name="sistema_estado" value="<?php echo (isset($sistema) ? $sistema->sistema_estado : set_value('sistema_estado')) ?>">
