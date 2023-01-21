@@ -62,7 +62,7 @@
                                     </div>
                                     <div class="form-group col-md-3">
                                         <label for="inputEmail4">E-mail de contato</label>
-                                        <input type="email" class="form-control cnpj" name="sistema_email" value="<?php echo (isset($sistema) ? $sistema->sistema_email : set_value('sistema_email')) ?>">
+                                        <input type="email" class="form-control" name="sistema_email" value="<?php echo (isset($sistema) ? $sistema->sistema_email : set_value('sistema_email')) ?>">
                                         <?php echo form_error("sistema_email", "<div class='text-danger'>", "</div>"); ?> 
                                     </div>
                                     <div class="form-group col-md-3">
