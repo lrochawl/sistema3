@@ -39,7 +39,7 @@
                                     </div>
                                     <div class="form-group col-md-3">
                                         <label for="inputEmail4">CNPJ</label>
-                                        <input type="text" class="form-control cnpj" name="sistema_cnpjsistema_cnpj" value="<?php echo (isset($sistema) ? $sistema->sistema_cnpj : set_value('sistema_cnpj')) ?>">
+                                        <input type="text" class="form-control cnpj" name="sistema_cnpj" value="<?php echo (isset($sistema) ? $sistema->sistema_cnpj : set_value('sistema_cnpj')) ?>">
                                         <?php echo form_error("sistema_cnpj", "<div class='text-danger'>", "</div>"); ?> 
                                     </div>
                                     <div class="form-group col-md-3">
@@ -85,12 +85,12 @@
                                     </div>
                                     <div class="form-group col-md-2">
                                         <label for="inputEmail4">Numero</label>
-                                        <input type="email" class="form-control" name="sistema_numero" value="<?php echo (isset($sistema) ? $sistema->sistema_numero : set_value('sistema_numero')) ?>">
+                                        <input type="text" class="form-control" name="sistema_numero" value="<?php echo (isset($sistema) ? $sistema->sistema_numero : set_value('sistema_numero')) ?>">
                                         <?php echo form_error("sistema_numero", "<div class='text-danger'>", "</div>"); ?> 
                                     </div>
                                     <div class="form-group col-md-2">
                                         <label for="inputEmail4">Cidade</label>
-                                        <input type="url" class="form-control" name="sistema_cidade" value="<?php echo (isset($sistema) ? $sistema->sistema_cidade : set_value('sistema_cidade')) ?>">
+                                        <input type="text" class="form-control" name="sistema_cidade" value="<?php echo (isset($sistema) ? $sistema->sistema_cidade : set_value('sistema_cidade')) ?>">
                                         <?php echo form_error("sistema_cidade", "<div class='text-danger'>", "</div>"); ?> 
                                     </div>
                                     
