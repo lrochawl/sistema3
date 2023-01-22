@@ -27,7 +27,7 @@ class Sistema extends CI_Controller
         $this->form_validation->set_rules('sistema_site_url', 'URL do site', 'trim|required|valid_url|max_length[100]');
         $this->form_validation->set_rules('sistema_cep', 'CEP', 'trim|required|exact_length[9]');
         $this->form_validation->set_rules('sistema_endereco', 'Endereço', 'trim|required|min_length[5]|max_length[145]');
-        $this->forma_validation->set_rules('sistema_numero', 'Numero', 'trim|required|max_length[30]');
+        $this->form_validation->set_rules('sistema_numero', 'Numero', 'trim|required|max_length[30]');
         $this->form_validation->set_rules('sistema_cidade', 'Cidade', 'trim|required|min_length[4]|max_length[50]');
         $this->form_validation->set_rules('sistema_estado', 'UF', 'trim|required|exact_length[2]');
         $this->form_validation->set_rules('sistema_produtos_destaques', 'Quntidade de produtos em destaque', 'trim|required|integer');
