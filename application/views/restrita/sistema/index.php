@@ -75,7 +75,7 @@
                                 <div class="form-row">
                                     <div class="form-group col-md-2">
                                         <label for="inputEmail4">CEP</label>
-                                        <input type="text" class="form-control phone_with_ddd" name="sistema_cep" value="<?php echo (isset($sistema) ? $sistema->sistema_cep : set_value('sistema_cep')) ?>">
+                                        <input type="text" class="form-control" name="sistema_cep" value="<?php echo (isset($sistema) ? $sistema->sistema_cep : set_value('sistema_cep')) ?>">
                                         <?php echo form_error("sistema_cep", "<div class='text-danger'>", "</div>"); ?> 
                                     </div>
                                     <div class="form-group col-md-4">
