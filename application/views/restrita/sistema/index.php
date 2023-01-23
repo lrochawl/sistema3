@@ -12,6 +12,8 @@
                         <div class="card-header">
                             <h4><?php echo $titulo ?></h4>
                         </div>
+                        <?php echo form_open('restrita/sistema') ?>
+                        <div class="card-body">
                         <?php if ($message = $this->session->flashdata('sucesso')) : ?>
                             <div class="alert alert-success alert-has-icon alert-dismissible show fade">
                                 <div class='alert-icon'><i class="fa fa-check-circle"></i></div>
@@ -37,9 +39,6 @@
                                 </div>
                             </div>
                         <?php endif ?>
-                        <?php echo form_open('restrita/sistema') ?>
-
-                        <div class="card-body">
                             <div class="form-row">
                                 <div class="form-group col-md-3">
                                     <label for="inputEmail4">Razão social</label>
