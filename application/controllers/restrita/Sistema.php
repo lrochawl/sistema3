@@ -57,6 +57,7 @@ class Sistema extends CI_Controller
             $data['sistema_estado'] = strtoupper($data['sistema_estado']);
             $data = html_escape($data);
             $this->core_model->update('sistema', $data, array('sistema_id' => 1));
+            redirect('restrita/sistema');
         } else {
 
             $data = array(
