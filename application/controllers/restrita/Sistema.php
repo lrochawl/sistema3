@@ -34,9 +34,29 @@ class Sistema extends CI_Controller
 
         if ($this->form_validation->run()) {
 
-            echo '<pre>';
-            print_r($this->input->post());
-            exit();
+            $data = elements(
+                array(
+                    'sistema_razao_social',
+                    'sistema_nome_fantasia',
+                    'sistema_cnpj',
+                    'sistema_ie',
+                    'sistema_telefone_fixo',
+                    'sistema_telefone_movel',
+                    'sistema_email',
+                    'sistema_site_url',
+                    'sistema_cep',
+                    'sistema_endereco',
+                    'sistema_numero',
+                    'sistema_cidade',
+                    'sistema_estado',
+                    'sistema_produtos_destaques'
+                ),
+                $this->input->post()
+            );
+
+            $data['sistema_estado'] = strtoupper($data['sistema_estado']);
+            $data = html_escape($data);
+            $this->core_model->update('sistema', $data, array('sistema_id' => 1));
         } else {
 
             $data = array(
